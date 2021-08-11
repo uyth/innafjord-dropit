@@ -1,3 +1,3 @@
 import Turbine from './Turbine';
-
-export { Turbine };
+import Chart from './Chart';
+export { Turbine, Chart };
