@@ -4,4 +4,4 @@ import WaterChart from './WaterChart'
 import WaterBox from './WaterBox';
 import WaterPaper from './WaterPaper';
 import ProductionPaper from './ProductionPaper';
-export { Turbine, Chart, WaterChart, WaterBox, WaterPaper, ProductionPaper };
+export { Turbines, Chart, WaterChart, WaterBox, WaterPaper, ProductionPaper };

@@ -24,6 +24,7 @@ const apis = {
     getTurbines,
     getGroupState,
     getWaterInflux,
+    putTurbine,
     getPowerPrice
 }
 
