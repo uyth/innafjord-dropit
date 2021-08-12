@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Turbines, Chart, WaterBox, WaterPaper} from './components';
+import { Turbines, Chart, WaterBox, WaterPaper, ProductionPaper} from './components';
 import Box1 from './components/Box1';
 import Box2 from './components/Box2';
 
