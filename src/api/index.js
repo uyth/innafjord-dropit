@@ -18,12 +18,14 @@ const putTurbine = (id, capacityUsage) => api.put(`Turbines/${id}`, null, {
     }
 });
 const getWaterInflux = () => openApi.get(`WaterInflux`);
+const getPowerPrice = () => openApi.get(`PowerPrice`);
 
 const apis = {
     getTurbines,
     getGroupState,
+    getWaterInflux,
     putTurbine,
-    getWaterInflux
+    getPowerPrice
 }
 
 export default apis;
