@@ -1,4 +1,6 @@
 import Turbine from './Turbine';
 import Chart from './Chart';
-import Electricity from './Chart';
-export { Turbine, Chart, Electricity };
+import WaterChart from './WaterChart'
+import WaterBox from './WaterBox';
+import WaterPaper from './WaterPaper';
+export { Turbine, Chart, WaterChart, WaterBox, WaterPaper };
