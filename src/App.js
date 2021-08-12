@@ -3,6 +3,7 @@ import './App.css';
 import { Turbines, Chart, WaterBox, WaterPaper} from './components';
 import Box1 from './components/Box1';
 import Box2 from './components/Box2';
+import { Grid } from '@material-ui/core';
 
 
 const data = [{name: '10.08', uv: 400, pv: 2400, amt: 10000}, 
@@ -11,8 +12,10 @@ const data = [{name: '10.08', uv: 400, pv: 2400, amt: 10000},
 function App() {
   return (
     <div className="App">
-      <Box1/>
-      <Box2/>
+      <Grid container>
+        <Grid item xs="6"><Box1/></Grid>
+        <Grid item xs="6"><Box2/></Grid>
+      </Grid>
       <Turbines/>
     </div>
   );
