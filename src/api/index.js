@@ -9,10 +9,16 @@ const api = axios.create({
 
 const getTurbines = () => api.get(`Turbines`);
 const getGroupState = () => api.get(`GroupState`);
+const putTurbine = (id, capacityUsage) => api.put(`Turbines/${id}`, null, {
+    params: {
+        capacityUsage: capacityUsage
+    }
+});
 
 const apis = {
     getTurbines,
-    getGroupState
+    getGroupState,
+    putTurbine
 }
 
 export default apis;
