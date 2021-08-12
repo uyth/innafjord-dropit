@@ -12,11 +12,17 @@ const openApi = axios.create({
 
 const getTurbines = () => api.get(`Turbines`);
 const getGroupState = () => api.get(`GroupState`);
+const putTurbine = (id, capacityUsage) => api.put(`Turbines/${id}`, null, {
+    params: {
+        capacityUsage: capacityUsage
+    }
+});
 const getWaterInflux = () => openApi.get(`WaterInflux`);
 
 const apis = {
     getTurbines,
     getGroupState,
+    putTurbine,
     getWaterInflux
 }
 
