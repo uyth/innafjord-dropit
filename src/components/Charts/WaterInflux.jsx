@@ -2,7 +2,7 @@ import { Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { Chart} from '../';
 import api from '../../api/index.js';
-
+import { Box } from '@material-ui/core';
 const WaterInflux = () => {
     const [data, setData] = useState([]);
     const [current, setCurrent] = useState(0);
@@ -38,9 +38,13 @@ const WaterInflux = () => {
 
   return (
       <>
-      <Typography variant="h3">{current} m^3/s</Typography>
-        <Chart data={data}/>
+        <Box display="flex" alignContent="center" flexDirection="column">
+            <Typography variant="h3">{current} m^3/s</Typography>
+            <Typography variant="h5"> Vanntilførsel</Typography>
+            <Chart height={200} width={300} data={data}/>
+        </Box>
         </>
+        
  );
 }
 
