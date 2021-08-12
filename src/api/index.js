@@ -6,6 +6,9 @@ const api = axios.create({
     headers: config
 })
 
+const openApi = axios.create({
+  baseURL: "http://innafjord.azurewebsites.net/api"
+})
 
 const getTurbines = () => api.get(`Turbines`);
 const getGroupState = () => api.get(`GroupState`);
@@ -14,11 +17,13 @@ const putTurbine = (id, capacityUsage) => api.put(`Turbines/${id}`, null, {
         capacityUsage: capacityUsage
     }
 });
+const getWaterInflux = () => openApi.get(`WaterInflux`);
 
 const apis = {
     getTurbines,
     getGroupState,
-    putTurbine
+    putTurbine,
+    getWaterInflux
 }
 
 export default apis;
