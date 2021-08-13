@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Typography } from '@material-ui/core';
 import { Chart} from '../';
 import api from '../../api/index.js';
+import { Box } from '@material-ui/core';
 
 const Money = () => {
     const [data, setData] = useState([]);
@@ -37,10 +38,9 @@ const Money = () => {
     }
 
   return (
-      <>
-      <Typography variant="h5">Dagens inntekt: {current} NOK</Typography>
-        
-        </>
+    <Box display="flex" alignItems="center">
+        <Typography variant="h5">Dagens inntekt: {current} NOK</Typography>    
+    </Box>
  );
 }
 

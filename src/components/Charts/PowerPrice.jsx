@@ -2,6 +2,7 @@ import { Typography } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { Chart} from '../';
 import api from '../../api/index.js';
+import { Box } from '@material-ui/core';
 
 const PowerPrice = () => {
     const [data, setData] = useState([]);
@@ -37,10 +38,11 @@ const PowerPrice = () => {
     }
 
   return (
-      <>
-      <Typography variant="h3">{current} NOK</Typography>
-        <Chart data={data}/>
-        </>
+    <Box display="flex" alignContent="center" flexDirection="column">
+      <Typography variant="h3">{current} NOK </Typography>
+      <Typography variant="h5">Strømpris </Typography>
+        <Chart data={data} height={200} width={300} />
+    </Box>
  );
 }
 
