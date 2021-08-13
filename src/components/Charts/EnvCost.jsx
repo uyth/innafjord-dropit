@@ -23,7 +23,6 @@ const EnvCost = () => {
 
     const getEnvCostData = async () => {
         const res = await api.getGroupState();
-        console.log(res);
         const envCost = Math.ceil(res.data.environmentCost);
         const date= new Date();
         const datetext = date.toTimeString();
