@@ -14,7 +14,7 @@ const WaterLevel = () => {
 
         const timoutId = setTimeout(async ()=> {
             const dp = await getWaterLevelData();
-            setData([...data.slice(-10), dp]);
+            setData([...data.slice(-20), dp]);
         }, 1000);
         return () => clearTimeout(timoutId);
     }, [data])
@@ -34,7 +34,7 @@ const WaterLevel = () => {
     }
 
   return (
-        <Chart data={data}/>
+        <Chart data={data} yRefMin={25} yRefMax={40} yMin={0} yMax={50} label="m"/>
  );
 }
 
