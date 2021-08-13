@@ -1,5 +1,5 @@
 import React from 'react'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 export default function Chart({data, width, height}){
     return(
         <LineChart width={width? width: 600} height={height? height: 300} data={data}>
@@ -7,6 +7,7 @@ export default function Chart({data, width, height}){
           <CartesianGrid stroke="#ccc" />
           <XAxis dataKey="name" />
           <YAxis />
+          <Tooltip/>
         </LineChart>
       );
 }
