@@ -6,7 +6,7 @@ import { Box } from '@material-ui/core';
 
 function Box2() {
   return (
-      <ProductionPaper title="Strøm Produsert">
+      <ProductionPaper title="STRØM PRODUSERT">
         <Box display="flex" flexDirection="row" justifyContent="center">
           <PowerLevel/>
         </Box>
